@@ -3,17 +3,17 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        primary: '#F5F5F5',
-        secondary: '#008000',
-      },
-
       fontFamily: {
-        /* sans:['Vina Sans', 'sans-serif']*/
-        /*sans: ['Dancing Script', 'Dancing Script'],*/
-        serif: ['ui-serif', 'Georgia'],
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Jost', 'sans']
+      },
+      colors: {
+        primary: '#6d40e4',
+        secondary: '#47b725',
+        tertiary: '#4c4d4b',
       }
     },
   },
   plugins: [],
 }
+
