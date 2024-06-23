@@ -7,6 +7,7 @@ import {Footer} from "./view/common/Footer/Footer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {DefaultLayout} from "./view/common/DefaultLayout/DefaultLayout";
 import {Login} from "./view/pages/Login/Login";
+import {SignIn} from "./view/pages/SIgnIn/SignIn";
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
               <Route path="/*"
                      Component={DefaultLayout}>
               </Route>
-              {/*<Route path="/login"
-                     Component={Login}>
-              </Route>*/}
+
+              <Route path="/signin"
+                     Component={SignIn}>
+              </Route>
           </Routes>
       </BrowserRouter>
   );
