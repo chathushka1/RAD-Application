@@ -6,8 +6,8 @@ import {Footer} from "./view/common/Footer/Footer";
 // @ts-ignore
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {DefaultLayout} from "./view/common/DefaultLayout/DefaultLayout";
-import {Login} from "./view/pages/Login/Login";
 import {SignIn} from "./view/pages/SIgnIn/SignIn";
+import Login from "./view/pages/Login/Login";
 
 function App() {
   return (
@@ -21,6 +21,10 @@ function App() {
 
               <Route path="/signin"
                      Component={SignIn}>
+              </Route>
+
+              <Route path="/login"
+                     Component={Login}>
               </Route>
           </Routes>
       </BrowserRouter>

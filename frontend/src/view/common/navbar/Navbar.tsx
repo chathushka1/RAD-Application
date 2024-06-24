@@ -48,7 +48,7 @@ export class Navbar extends Component {
                             <a href="#" className="rounded-md bg-gradient-to-br bg-green-400 to-emerald-400 px-3 py-1.5 font-dm
                                text-sm font-medium text-white shadow-md shadow-green-400/50 transition-transform duration-200
                                ease-in-out hover:scale-[1.03]">
-                                <Link to="/login">Login In</Link>
+                                <Link to="/login">Log In</Link>
                             </a>
                             <a href="#"
                                className="rounded-md bg-gradient-to-br from-green-600 to-emerald-400 px-3 py-1.5 font-dm
