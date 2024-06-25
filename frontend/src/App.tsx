@@ -8,6 +8,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {DefaultLayout} from "./view/common/DefaultLayout/DefaultLayout";
 import {SignIn} from "./view/pages/SIgnIn/SignIn";
 import Login from "./view/pages/Login/Login";
+import {Admin} from "./view/pages/Admin/Admin";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
 
               <Route path="/login"
                      Component={Login}>
+              </Route>
+
+              <Route path="/admin/*"
+                     Component={Admin}>
               </Route>
           </Routes>
       </BrowserRouter>

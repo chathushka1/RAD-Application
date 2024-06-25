@@ -11,7 +11,7 @@ const SignController= {
             userData.password = hashSync(userData.password, salt);
             userData.confirmPassword = hashSync(userData.confirmPassword, salt);
             const user = await SignModel.create(userData);
-            res.statusCode(200);
+            res.status(200).json("Save Succesfully");
 
         } catch (error) {
             console.error(error);
