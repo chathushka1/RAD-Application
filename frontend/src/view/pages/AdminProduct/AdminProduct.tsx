@@ -130,7 +130,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
                                 <div className="col-span-6 sm:col-span-3">
                                     <label htmlFor="category"
                                            className="text-sm font-medium text-gray-900 block mb-2">Product Name</label>
-                                    <input type="text" name="room" id="room"
+                                    <input type="text" name="productName" id="productName"
                                            value={this.state.productName} onChange={this.handleMessageInputOnChange}
                                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                            placeholder="Title"/>
@@ -138,7 +138,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
                                 <div className="col-span-6 sm:col-span-3">
                                     <label htmlFor="brand"
                                            className="text-sm font-medium text-gray-900 block mb-2">Description</label>
-                                    <input type="text" name="title" id="title"
+                                    <input type="text" name="description" id="description"
                                            value={this.state.description} onChange={this.handleMessageInputOnChange}
                                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                            placeholder="Text"/>

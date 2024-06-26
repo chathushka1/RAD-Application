@@ -59,7 +59,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
     fetchData= async () =>{
         try {
-            this.api.get('/product/all').then((res:{data:any}) =>{
+            this.api.get('/iPad/all').then((res:{data:any}) =>{
                 const jsonData=res.data;
                 // @ts-ignore
                 this.setState({data:jsonData});
@@ -130,7 +130,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
                                 <div className="col-span-6 sm:col-span-3">
                                     <label htmlFor="category"
                                            className="text-sm font-medium text-gray-900 block mb-2">Product Name</label>
-                                    <input type="text" name="room" id="room"
+                                    <input type="text" name="productName" id="productName"
                                            value={this.state.productName} onChange={this.handleMessageInputOnChange}
                                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                            placeholder="Title"/>
@@ -138,7 +138,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
                                 <div className="col-span-6 sm:col-span-3">
                                     <label htmlFor="brand"
                                            className="text-sm font-medium text-gray-900 block mb-2">Description</label>
-                                    <input type="text" name="title" id="title"
+                                    <input type="text" name="description" id="description"
                                            value={this.state.description} onChange={this.handleMessageInputOnChange}
                                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                            placeholder="Text"/>
@@ -347,7 +347,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
     private OnSendButtonClick = () => {
         try {
-            this.api.post('/product/save',{
+            this.api.post('/iPad/save',{
                 id:this.state.id,
                 productName:this.state.productName,
                 description:this.state.description,
@@ -379,7 +379,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
     private onUpdateClick = () => {
         try {
-            this.api.put('product/update/'+this.state.id,{
+            this.api.put('iPad/update/'+this.state.id,{
                 id:this.state.id,
                 productName:this.state.productName,
                 description:this.state.description,
@@ -418,7 +418,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
     private onDeleteClick = () => {
         try {
-            this.api.delete('product/delete/'+this.state.id).then(async (res: { data: any }) => {
+            this.api.delete('iPad/delete/'+this.state.id).then(async (res: { data: any }) => {
                 let jsonData = res.data;
                 toast.success("Success Delete Form Data");
                 console.log(jsonData);
@@ -437,7 +437,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
     private dataBaseLastId = async () => {
         try {
-            const response = await this.api.get('/product/lastId');
+            const response = await this.api.get('/iPad/lastId');
             const jsonData = response.data;
 
             if (jsonData && jsonData.id !== undefined) {
