@@ -1,7 +1,7 @@
 var express=require('express');
 var router=express.Router();
 
-const productController=require("../controller/ProductController");
+const productController=require("../controller/IpadController");
 
 router.get('/all',productController.getAllProduct);
 
