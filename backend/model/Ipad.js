@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Iphone = mongoose.Schema({
+const Ipad = mongoose.Schema({
     "id":{
         required:true,
         type:Number,
@@ -26,9 +26,9 @@ const Iphone = mongoose.Schema({
 
 });
 
-const iphone = mongoose.model('Iphone', Iphone);
+const ipad = mongoose.model('Ipad', Ipad);
 
-module.exports = iphone;
+module.exports = ipad;
 
 
 
