@@ -23,7 +23,7 @@ interface IphoneProductState {
 
 }
 
-export class AdminProduct extends Component<IphoneProps,IphoneProductState> {
+export class IphoneProduct extends Component<IphoneProps,IphoneProductState> {
 
     private api: any;
 

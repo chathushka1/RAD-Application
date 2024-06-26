@@ -169,7 +169,7 @@ export class Admin extends Component {
                                                 />
                                             </svg>
                                             <span className="text-gray-100">
-                                                <Link to={"/admin/addRoom"}>Mac Add</Link>
+                                                <Link to={"/admin/addMac"}>Mac Add</Link>
                                             </span>
                                         </a>
                                     </li>
@@ -193,7 +193,7 @@ export class Admin extends Component {
                                                 />
                                             </svg>
                                             <span className="text-gray-100">
-                                                <Link to={"/admin/addRoom"}>Iphone Add</Link>
+                                                <Link to={"/admin/addIphone"}>Iphone Add</Link>
                                             </span>
                                         </a>
                                     </li>
@@ -217,7 +217,7 @@ export class Admin extends Component {
                                                 />
                                             </svg>
                                             <span className="text-gray-100">
-                                                <Link to={"/admin/addRoom"}>Ipad Add</Link>
+                                                <Link to={"/admin/addIpad"}>Ipad Add</Link>
                                             </span>
                                         </a>
                                     </li>
@@ -241,7 +241,7 @@ export class Admin extends Component {
                                                 />
                                             </svg>
                                             <span className="text-gray-100">
-                                                <Link to={"/admin/addRoom"}>I Watch Add</Link>
+                                                <Link to={"/admin/addIwatch"}>I Watch Add</Link>
                                             </span>
                                         </a>
                                     </li>

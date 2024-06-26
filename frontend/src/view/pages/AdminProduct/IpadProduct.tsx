@@ -23,7 +23,7 @@ interface IpadProductState {
 
 }
 
-export class AdminProduct extends Component<IpadProps,IpadProductState> {
+export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
     private api: any;
 
@@ -107,7 +107,7 @@ export class AdminProduct extends Component<IpadProps,IpadProductState> {
 
                     <div className="flex items-start justify-center p-5 border-b rounded-t">
                         <h3 className="text-4xl  font-semibold">
-                            Add Product
+                            Add i Pad
                         </h3>
 
                     </div>

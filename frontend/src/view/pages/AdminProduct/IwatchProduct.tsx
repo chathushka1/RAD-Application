@@ -23,7 +23,7 @@ interface IwatchProductState {
 
 }
 
-export class AdminProduct extends Component<IwatchProps,IwatchProductState> {
+export class IwatchProduct extends Component<IwatchProps,IwatchProductState> {
 
     private api: any;
 
@@ -107,7 +107,7 @@ export class AdminProduct extends Component<IwatchProps,IwatchProductState> {
 
                     <div className="flex items-start justify-center p-5 border-b rounded-t">
                         <h3 className="text-4xl  font-semibold">
-                            Add Product
+                            Add i Watch
                         </h3>
 
                     </div>

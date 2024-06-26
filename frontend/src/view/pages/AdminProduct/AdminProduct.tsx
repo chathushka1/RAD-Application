@@ -107,7 +107,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
 
                     <div className="flex items-start justify-center p-5 border-b rounded-t">
                         <h3 className="text-4xl  font-semibold">
-                            Add Product
+                            Add Mac
                         </h3>
 
                     </div>
