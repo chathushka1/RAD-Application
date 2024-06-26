@@ -136,13 +136,13 @@ export class Mac extends Component {
                                 </path>
                             </svg>
                         </div>
-                        <h1 className="text-3xl my-5">MacBook Air 13-inch with M2 chip</h1>
+                        <h1 className="text-3xl my-5">MacBook Air</h1>
                         <p className="mb-5">The powerful 8-core CPU and up to 10-core GPU of the Apple M2 chip keep things running smoothly.</p>
                         <h2 className="font-semibold mb-5">$999</h2>
                         <button className="p-2 px-6 bg-purple-500 text-white rounded-md hover:bg-purple-600">Add To Cart</button>
                     </section>
 
-                    <section className="p-5 py-10 bg-green-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
+                    {/*<section className="p-5 py-10 bg-green-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
                         <img src={image2} alt=""/>
                         <div className="space-x-1 flex justify-center mt-10">
                             <svg className="w-4 h-4 mx-px fill-current text-orange-600" xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +260,7 @@ export class Mac extends Component {
                         <p className="mb-5">Do more and do it faster with the next-generation M2 or M2 Pro chip</p>
                         <h2 className="font-semibold mb-5">$599</h2>
                         <button className="p-2 px-6 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add To Cart</button>
-                    </section>
+                    </section>*/}
                 </section>
             </section>
 

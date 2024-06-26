@@ -17,6 +17,7 @@ var productRouter = require('./routes/Product');
 var iPhoneRouter = require('./routes/Iphone');
 var iPadRouter = require('./routes/Ipad');
 var iWatchRouter = require('./routes/Iwatch');
+var byProductRouter = require('./routes/ByProduct');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use('/product', productRouter);
 app.use('/iPhone', iPhoneRouter);
 app.use('/iPad', iPadRouter);
 app.use('/iWatch', iWatchRouter);
+app.use('/byProduct', byProductRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
