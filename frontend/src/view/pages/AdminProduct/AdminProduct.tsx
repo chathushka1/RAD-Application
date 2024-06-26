@@ -163,22 +163,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
                                            placeholder="Image"/>
                                 </div>
 
-                                {/*<div className="col-span-6 sm:col-span-3">
-                                    <label htmlFor="availability"
-                                           className="text-sm font-medium text-gray-900 block mb-2">
-                                        Availability
-                                    </label>
-                                    <select
-                                        name="availability"
-                                        id="availability"
-                                        value={this.state.selectedAvailability}
-                                        onChange={this.handleAvailabilityChange}
-                                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm
-                                        rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5">
-                                        <option value="available">Available</option>
-                                        <option value="notAvailable">Not Available</option>
-                                    </select>
-                                </div>*/}
+                                {}
                             </div>
                         </form>
 
