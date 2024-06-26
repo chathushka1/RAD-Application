@@ -1,16 +1,16 @@
 var express=require('express');
 var router=express.Router();
 
-const productController=require("../controller/IphoneController");
+const iPhoneController=require("../controller/IphoneController");
 
-router.get('/all',productController.getAllProduct);
+router.get('/all',iPhoneController.getAllProduct);
 
-router.post('/save',productController.saveProduct);
+router.post('/save',iPhoneController.saveProduct);
 
-router.put('/update/:id',productController.updateProduct);
+router.put('/update/:id',iPhoneController.updateProduct);
 
-router.delete('/delete/:id',productController.deleteProduct);
+router.delete('/delete/:id',iPhoneController.deleteProduct);
 
-router.get('/lastId',productController.dataBaseLastIdCheck);
+router.get('/lastId',iPhoneController.dataBaseLastIdCheck);
 
 module.exports=router;

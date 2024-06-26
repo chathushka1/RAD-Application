@@ -1,16 +1,16 @@
 var express=require('express');
 var router=express.Router();
 
-const productController=require("../controller/IwatchContoller");
+const iWatchController=require("../controller/IwatchContoller");
 
-router.get('/all',productController.getAllProduct);
+router.get('/all',iWatchController.getAllProduct);
 
-router.post('/save',productController.saveProduct);
+router.post('/save',iWatchController.saveProduct);
 
-router.put('/update/:id',productController.updateProduct);
+router.put('/update/:id',iWatchController.updateProduct);
 
-router.delete('/delete/:id',productController.deleteProduct);
+router.delete('/delete/:id',iWatchController.deleteProduct);
 
-router.get('/lastId',productController.dataBaseLastIdCheck);
+router.get('/lastId',iWatchController.dataBaseLastIdCheck);
 
 module.exports=router;
