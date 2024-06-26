@@ -8,6 +8,9 @@ import {SignIn} from "./view/pages/SIgnIn/SignIn";
 import Login from "./view/pages/Login/Login";
 import {Admin} from "./view/pages/Admin/Admin";
 import {Customer} from "./view/pages/Customer/Customer";
+import {CustomerProduct} from "./view/common/CustomerProduct/CustomerProduct";
+import {CustomerMac} from "./view/pages/CustomerAccount/CustomerMac";
+
 
 function App() {
   return (
@@ -32,7 +35,9 @@ function App() {
               </Route>
 
               <Route path="/customer/*" Component={Customer}>
+              </Route>
 
+              <Route path="/customer/product" Component={CustomerMac}>
               </Route>
 
           </Routes>

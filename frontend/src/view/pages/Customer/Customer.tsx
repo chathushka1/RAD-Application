@@ -76,7 +76,7 @@ export class Customer extends Component {
                     <div className="flex flex-wrap text-center justify-center">
                         <div className="p-4 md:w-1/4 sm:w-1/2">
                             <div className="px-4 py-6 transform transition duration-500 hover:scale-110">
-                                <Link to="/mac">
+                                <Link to="/customer/product">
                                     <div className="flex justify-center">
                                         <img src={image1} alt="" className="w-32 mb-3"/>
                                     </div>
