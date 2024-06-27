@@ -1,10 +1,8 @@
 import {Component} from "react";
 import axios from "axios";
-import {CustomerProduct} from "../../common/CustomerProduct/CustomerProduct";
 
-
-
-export class CustomerMac extends Component {
+import {CustomerIwatches} from "../../common/CustomerProduct/CustomerIwatches";
+export class CustomerIwatch extends Component {
 
     private api:any;
 
@@ -22,7 +20,7 @@ export class CustomerMac extends Component {
 
     fetchData= async () =>{
         try {
-            this.api.get('/product/all').then((res:{data:any}) =>{
+            this.api.get('/iWatch/all').then((res:{data:any}) =>{
                 const jsonData=res.data;
                 this.setState({data:jsonData});
             }).catch((error:any) =>{
@@ -32,6 +30,7 @@ export class CustomerMac extends Component {
             console.log("Data NOT Loard",error);
         }
     }
+
     render() {
 
         // @ts-ignore
@@ -46,12 +45,12 @@ export class CustomerMac extends Component {
                     <section
                         className="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start ">
 
-                {
-                    data.map((product: any) => (
-                        <CustomerProduct key={product.id} data={product}/>
-                    ))
-                }
-                </section>
+                        {
+                            data.map((iWatch: any) => (
+                                <CustomerIwatches key={iWatch.id} data={iWatch}/>
+                            ))
+                        }
+                    </section>
                 </section>
             </>
         );

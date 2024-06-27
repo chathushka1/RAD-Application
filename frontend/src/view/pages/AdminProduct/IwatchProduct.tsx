@@ -17,7 +17,6 @@ interface IwatchProductState {
     image: string,
     data:any[];
     isButtonDisabled: boolean;
-    selectedAvailability: string;
     currentPage: number;
     itemsPerPage: number;
 
@@ -39,7 +38,6 @@ export class IwatchProduct extends Component<IwatchProps,IwatchProductState> {
             price: 0,
             image: '',
             data: [],
-            selectedAvailability: 'available',
             currentPage: 1,
             itemsPerPage: 5,
 
@@ -287,9 +285,9 @@ export class IwatchProduct extends Component<IwatchProps,IwatchProductState> {
         this.setState({ currentPage: pageNumber });
     };
 
-    handleAvailabilityChange = (event: ChangeEvent<HTMLSelectElement>) => {
+   /* handleAvailabilityChange = (event: ChangeEvent<HTMLSelectElement>) => {
         this.setState({ selectedAvailability: event.target.value });
-    };
+    };*/
 
     convertBase64 = (event: ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];

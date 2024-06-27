@@ -10,6 +10,9 @@ import {Admin} from "./view/pages/Admin/Admin";
 import {Customer} from "./view/pages/Customer/Customer";
 import {CustomerProduct} from "./view/common/CustomerProduct/CustomerProduct";
 import {CustomerMac} from "./view/pages/CustomerAccount/CustomerMac";
+import {CustomerIphone} from "./view/pages/CustomerAccount/CustomerIphone";
+import {CustomerIpad} from "./view/pages/CustomerAccount/CustomerIpad";
+import {CustomerIwatch} from "./view/pages/CustomerAccount/CustomerIwatch";
 
 
 function App() {
@@ -39,6 +42,16 @@ function App() {
 
               <Route path="/customer/product" Component={CustomerMac}>
               </Route>
+
+              <Route path="/customer/iPhones" Component={CustomerIphone}>
+              </Route>
+
+              <Route path="/customer/iPads" Component={CustomerIpad}>
+              </Route>
+
+              <Route path="/customer/iWatches" Component={CustomerIwatch}>
+              </Route>
+
 
           </Routes>
       </BrowserRouter>

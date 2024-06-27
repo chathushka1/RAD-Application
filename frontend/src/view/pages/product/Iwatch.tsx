@@ -4,14 +4,59 @@ import image2 from "../../../images/products/watchultra2.jpeg";
 import image3 from "../../../images/products/watchse.png";
 import image4 from "../../../images/products/watchhermes.jpeg";
 
+import axios from "axios";
+import {Iwatches} from "../../common/Products/Iwatches";
 export class Iwatch extends Component {
+
+    private api:any;
+
+    constructor(props:{} | Readonly<{}>) {
+        super(props);
+        this.api=axios.create({baseURL:`http://localhost:4000`})
+        this.state={
+            data:[],
+        }
+    }
+
+    componentDidMount() {
+        this.fetchData()
+    }
+
+    fetchData= async () =>{
+        try {
+            this.api.get('/iWatch/all').then((res:{data:any}) =>{
+                const jsonData=res.data;
+                this.setState({data:jsonData});
+            }).catch((error:any) =>{
+                console.log("Axios Error",error);
+            });
+        }catch (error){
+            console.log("Data NOT Loard",error);
+        }
+    }
+
     render() {
+
+        // @ts-ignore
+        const {data}=this.state;
+
         return (
             <section className="container mx-auto p-10 md:py-12 px-0 md:p-8 md:px-0">
                 <div className="text-center text-2xl capitalize py-6 font-medium tracking-wider dark:text-blue-950">
-                    <h2>Shop Apple Watch</h2>
+                    <h2>Shop Apple Watch Guest Account</h2>
                 </div>
+
                 <section
+                    className="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start ">
+
+                    {
+                        data.map((iWatch:any)=>(
+                            <Iwatches key={iWatch.id} data={iWatch}/>
+                        ))
+                    }
+
+
+                    {/*<section
                     className="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start ">
                     <section className="p-5 py-10 bg-purple-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
                         <img src={image1} alt=""/>
@@ -172,7 +217,8 @@ export class Iwatch extends Component {
                         <h2 className="font-semibold mb-5">$1249</h2>
                         <button className="p-2 px-6 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add To Cart</button>
                     </section>
-                </section>
+                </section>*/}
+            </section>
             </section>
         );
     }

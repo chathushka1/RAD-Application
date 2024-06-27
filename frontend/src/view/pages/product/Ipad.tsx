@@ -42,7 +42,7 @@ export class Ipad extends Component {
         return (
             <section className="container mx-auto p-10 md:py-12 px-0 md:p-8 md:px-0">
                 <div className="text-center text-2xl capitalize py-6 font-medium tracking-wider dark:text-blue-950">
-                    <h2>Ways to save. Find what works for you.</h2>
+                    <h2>Ways to save. Find what works for you. Guest Account</h2>
                 </div>
 
                 <section

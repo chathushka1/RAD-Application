@@ -87,7 +87,7 @@ export class Customer extends Component {
 
                         <div className="p-4 md:w-1/4 sm:w-1/2">
                             <div className="px-4 py-6 transform transition duration-500 hover:scale-110">
-                                <Link to="/iPhone">
+                                <Link to="/customer/iPhones">
                                     <div className="flex justify-center">
                                         <img src={image2} alt="" className="w-32 mb-3"/>
                                     </div>
@@ -98,7 +98,7 @@ export class Customer extends Component {
 
                         <div className="p-4 md:w-1/4 sm:w-1/2">
                             <div className="px-4 py-6 transform transition duration-500 hover:scale-110">
-                                <Link to="/ipad">
+                                <Link to="/customer/iPads">
                                     <div className="flex justify-center">
                                         <img src={image3} alt="" className="w-32 mb-3"/>
                                     </div>
@@ -109,7 +109,7 @@ export class Customer extends Component {
 
                         <div className="p-4 md:w-1/4 sm:w-1/2">
                             <div className="px-4 py-6 transform transition duration-500 hover:scale-110">
-                                <Link to="/iwatch">
+                                <Link to="/customer/iWatches">
                                     <div className="flex justify-center">
                                         <img src={image4} alt="" className="w-32 mb-3"/>
                                     </div>
