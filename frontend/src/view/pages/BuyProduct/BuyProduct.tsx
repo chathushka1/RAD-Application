@@ -11,7 +11,7 @@ interface BuyProductProps {
 interface BuyProductState {
     isButtonDisabled: boolean,
     data: any[],
-    id: number,
+    id: string,
     productName: string,
     description: string,
     price: number,
@@ -33,7 +33,7 @@ export class BuyProduct extends Component<BuyProductProps,BuyProductState> {
         this.state = {
             isButtonDisabled: false,
             data: [],
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,
@@ -352,7 +352,7 @@ export class BuyProduct extends Component<BuyProductProps,BuyProductState> {
 
     private onClickClearData =  () => {
         this.setState({
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,

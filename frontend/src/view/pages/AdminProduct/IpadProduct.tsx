@@ -10,7 +10,7 @@ interface IpadProps{
 }
 
 interface IpadProductState {
-    id: number,
+    id: string,
     productName: string,
     description: string,
     price: number,
@@ -33,7 +33,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
         this.state = {
             isButtonDisabled: false,
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,
@@ -123,7 +123,6 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
                                            className="text-sm font-medium text-gray-900 block mb-2">ID</label>
                                     <input type="text" name="id" id="id"
                                            value={this.state.id} onChange={this.handleMessageInputOnChange}
-                                           readOnly={true}
                                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                            placeholder="ID"/>
                                 </div>
@@ -325,7 +324,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
 
     private onClickClearData = () => {
         this.setState({
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,
@@ -368,7 +367,7 @@ export class IpadProduct extends Component<IpadProps,IpadProductState> {
         }
         finally {
             this.setState({
-                id: 0,
+                id: "",
                 productName: '',
                 description: '',
                 price: 0,

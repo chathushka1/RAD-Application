@@ -10,7 +10,7 @@ interface AdminProps{
 }
 
 interface AdminProductState {
-    id: number,
+    id: string,
     productName: string,
     description: string,
     price: number,
@@ -33,7 +33,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
 
         this.state = {
             isButtonDisabled: false,
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,
@@ -52,7 +52,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
 
 
     componentDidMount() {
-        this.dataBaseLastId();
+       /* this.dataBaseLastId();*/
         this.fetchData()
 
     }
@@ -123,7 +123,6 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
                                            className="text-sm font-medium text-gray-900 block mb-2">ID</label>
                                     <input type="text" name="id" id="id"
                                            value={this.state.id} onChange={this.handleMessageInputOnChange}
-                                           readOnly={true}
                                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                            placeholder="ID"/>
                                 </div>
@@ -325,7 +324,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
 
     private onClickClearData = () => {
         this.setState({
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,
@@ -358,7 +357,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
                 toast("Success Submit Form Data" + jsonData);
                 console.log(jsonData);
                 await this.fetchData();
-                await this.dataBaseLastId();
+                /*await this.dataBaseLastId();*/
             }).catch((error:any)=>{
                 console.log("Axios error",error)
                 toast("Error Submit Form Data "+ error);
@@ -368,7 +367,7 @@ export class AdminProduct extends Component<AdminProps,AdminProductState> {
         }
         finally {
             this.setState({
-                id: 0,
+                id: "",
                 productName: '',
                 description: '',
                 price: 0,

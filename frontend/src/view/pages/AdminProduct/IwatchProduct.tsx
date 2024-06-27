@@ -10,7 +10,7 @@ interface IwatchProps{
 }
 
 interface IwatchProductState {
-    id: number,
+    id: string,
     productName: string,
     description: string,
     price: number,
@@ -32,7 +32,7 @@ export class IwatchProduct extends Component<IwatchProps,IwatchProductState> {
 
         this.state = {
             isButtonDisabled: false,
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,
@@ -121,7 +121,6 @@ export class IwatchProduct extends Component<IwatchProps,IwatchProductState> {
                                            className="text-sm font-medium text-gray-900 block mb-2">ID</label>
                                     <input type="text" name="id" id="id"
                                            value={this.state.id} onChange={this.handleMessageInputOnChange}
-                                           readOnly={true}
                                            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                            placeholder="ID"/>
                                 </div>
@@ -323,7 +322,7 @@ export class IwatchProduct extends Component<IwatchProps,IwatchProductState> {
 
     private onClickClearData = () => {
         this.setState({
-            id: 0,
+            id: "",
             productName: '',
             description: '',
             price: 0,
@@ -366,7 +365,7 @@ export class IwatchProduct extends Component<IwatchProps,IwatchProductState> {
         }
         finally {
             this.setState({
-                id: 0,
+                id: "",
                 productName: '',
                 description: '',
                 price: 0,

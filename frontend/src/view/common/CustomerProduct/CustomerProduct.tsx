@@ -133,7 +133,7 @@ export class CustomerProduct extends Component<ProductProps,ProductState>{
 
                 }).then((response: any) => {
                     console.log("Buy Product", response);
-                    toast.success("Buy Product Is Not available.Now You File Payment From");
+                    toast.success("Buy Product Is available.Now You File Payment From");
                 }).catch((error: any) => {
                     console.log("Not available", error);
                     toast("Not available" + error);

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Iphone = mongoose.Schema({
     "id":{
         required:true,
-        type:Number,
+        type:String,
         unique:true,
         index:true
     },
