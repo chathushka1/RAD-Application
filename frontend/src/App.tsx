@@ -13,6 +13,7 @@ import {CustomerMac} from "./view/pages/CustomerAccount/CustomerMac";
 import {CustomerIphone} from "./view/pages/CustomerAccount/CustomerIphone";
 import {CustomerIpad} from "./view/pages/CustomerAccount/CustomerIpad";
 import {CustomerIwatch} from "./view/pages/CustomerAccount/CustomerIwatch";
+import {CustomerProductAccept} from "./view/pages/CustomerProductAccept/CustomerProductAccept";
 
 
 function App() {
@@ -52,6 +53,8 @@ function App() {
               <Route path="/customer/iWatches" Component={CustomerIwatch}>
               </Route>
 
+              <Route path="/customer/bookProduct" Component={CustomerProductAccept}>
+              </Route>
 
           </Routes>
       </BrowserRouter>

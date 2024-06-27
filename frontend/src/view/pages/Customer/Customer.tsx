@@ -30,7 +30,7 @@ export class Customer extends Component {
                             <li className="pt-1.5 font-dm text-sm font-medium text-slate-700">
                                 <a href="#">
                                     {/* eslint-disable-next-line react/jsx-no-undef */}
-                                    {/*<Link to="/customer">Rooms</Link>*/}
+                                    <Link to="/customer/bookProduct">Product</Link>
                                 </a>
                             </li>
                             <li className="pt-1.5 font-dm text-sm font-medium text-slate-700">

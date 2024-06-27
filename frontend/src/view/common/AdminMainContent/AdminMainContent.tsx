@@ -5,6 +5,7 @@ import {AdminProduct} from "../../pages/AdminProduct/AdminProduct";
 import {IphoneProduct} from "../../pages/AdminProduct/IphoneProduct";
 import {IpadProduct} from "../../pages/AdminProduct/IpadProduct";
 import {IwatchProduct} from "../../pages/AdminProduct/IwatchProduct";
+import {BuyProduct} from "../../pages/BuyProduct/BuyProduct";
 export class AdminMainContent extends Component {
     render() {
         return (
@@ -17,6 +18,7 @@ export class AdminMainContent extends Component {
                         <Route path="/addIphone" Component={IphoneProduct}></Route>
                         <Route path="/addIpad" Component={IpadProduct}></Route>
                         <Route path="/addIwatch" Component={IwatchProduct}></Route>
+                        <Route path="/buyProduct" Component={BuyProduct}></Route>
                     </Route>
                 </Routes>
             </>
