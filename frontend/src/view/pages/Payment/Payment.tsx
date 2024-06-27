@@ -11,13 +11,13 @@ interface PaymentProps {
 
 interface PaymentState {
     data: any
-    id:number
+    id:string
     customerEmail: string
     totalPayment: string
     customerName: string
     customerContact: string
     customerAddress: string
-    title: string
+    productName: string
     price:number
     customerPaymentDate: string
     bookingDateTime: string
@@ -36,13 +36,13 @@ export class Payment extends Component<PaymentProps,PaymentState> {
         this.api=axios.create({baseURL:`http://localhost:4000`})
         this.state={
             data:[],
-            id:0,
+            id:"",
             customerEmail:'',
             totalPayment:'',
             customerName:'',
             customerContact:'',
             customerAddress:'',
-            title:'',
+            productName:'',
             price:0,
             customerPaymentDate:'',
             bookingDateTime:''
@@ -54,7 +54,6 @@ export class Payment extends Component<PaymentProps,PaymentState> {
     componentDidMount() {
         this.fetchData()
     }
-
 
 
     fetchData = async () => {
@@ -265,7 +264,7 @@ export class Payment extends Component<PaymentProps,PaymentState> {
                         customerName: product.customerName,
                         customerContact: product.customerContact,
                         customerAddress: product.customerAddress,
-                        title: product.title,
+                        productName: product.productName,
                         price: product.price,
                         customerPaymentDate: formattedDate,
                         bookingDateTime: product.bookingDateTime
