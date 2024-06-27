@@ -18,6 +18,7 @@ var iPhoneRouter = require('./routes/Iphone');
 var iPadRouter = require('./routes/Ipad');
 var iWatchRouter = require('./routes/Iwatch');
 var byProductRouter = require('./routes/ByProduct');
+var payment = require('./routes/Payment');
 
 var bodyParser=require('body-parser');
 
@@ -49,6 +50,7 @@ app.use('/iPhone', iPhoneRouter);
 app.use('/iPad', iPadRouter);
 app.use('/iWatch', iWatchRouter);
 app.use('/byProduct', byProductRouter);
+app.use('/payment', payment);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
