@@ -83,13 +83,6 @@ export class ProductAccept extends Component<AcceptProductProps,AcceptProductSta
                                                 </div>
                                             </div>
                                         </div>
-                                       {/* <div className="flex justify-between space-x-8 items-start w-full">
-                                            <p className="text-base dark:text-white xl:text-lg leading-6"><span
-                                                className="text-red-300">${data.price}</span></p>
-                                            <p className="text-base dark:text-white xl:text-lg leading-6">Room No :<span
-                                                className="text-gray-950">{data.id}</span></p>
-                                            <p className="text-base dark:text-white xl:text-lg font-semibold leading-6 text-gray-800">${data.price}</p>
-                                        </div>*/}
                                     </div>
                                 </div>
                             </div>

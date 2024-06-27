@@ -61,9 +61,6 @@ export class CustomerProductAccept extends Component {
                                 </div>
                                 <p className="font-semibold text-sm">{signUserDetails.firstName + " " + signUserDetails.lastName}</p>
                             </div>
-                            {/* <a href="/">
-                                <img className="ml-8 rounded-full" src={logo} loading="lazy"
-                                     width="42" height="32"/></a>*/}
                         </div>
                         <ul className="hidden items-center justify-center gap-10 md:flex ml-4">
                             <li className="pt-1.5 font-dm text-sm font-medium text-slate-700">
@@ -72,17 +69,6 @@ export class CustomerProductAccept extends Component {
                                     <Link to="/customer">Product</Link>
                                 </a>
                             </li>
-                            {/*<li className="pt-1.5 font-dm text-sm font-medium text-slate-700">
-                                <a href="#">
-                                    <Link to="/customer/yourDetails">Your Details</Link>
-                                </a>
-                            </li>
-                            <li className="pt-1.5 font-dm text-sm font-medium text-slate-700">
-                                <a href="#">
-                                     eslint-disable-next-line react/jsx-no-undef
-                                    <Link to="/customer/bookCheck">You Book Product</Link>
-                                </a>
-                            </li>*/}
 
                         </ul>
                         <div className="flex-grow"></div>
@@ -112,15 +98,6 @@ export class CustomerProductAccept extends Component {
 
 
                 </div>
-                {/* <div
-                    className="overflow-hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mx-auto p-5 sm:p-10 md:p-16">
-
-                    {
-                        data.map((product: any) => (
-                            <RoomAcceptProduct key={product.id} data={product}/>
-                        ))
-                    }
-                    </div>*/}
 
                 {
                     data.map((product: any) => (

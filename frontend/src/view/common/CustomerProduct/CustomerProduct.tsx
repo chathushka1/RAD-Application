@@ -133,16 +133,16 @@ export class CustomerProduct extends Component<ProductProps,ProductState>{
 
                 }).then((response: any) => {
                     console.log("Buy Product", response);
-                    toast.success("Buy Product Is Booking.Now You File Payment From");
+                    toast.success("Buy Product Is Not available.Now You File Payment From");
                 }).catch((error: any) => {
-                    console.log("Not Buy Product", error);
-                    toast("Not Buy Product" + error);
+                    console.log("Not available", error);
+                    toast("Not available" + error);
                 }).finally(() => {
                     this.setState({ isButtonDisabled: true });
                 });
         } catch (error) {
-            console.log("Not Buy Product", error);
-            toast("Not Buy Product" + error);
+            console.log("Not available", error);
+            toast("Not available" + error);
             // this.setState({ isButtonDisabled: false });
         }
     }
