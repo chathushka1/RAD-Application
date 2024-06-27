@@ -107,7 +107,7 @@ export class CustomerIphones extends Component<ProductProps,ProductState> {
             const signUserDetails = JSON.parse(localStorage.getItem('signUserDetails') || '{}');
 
 
-            if (this.props.data.availability === 'available') {
+
                 // this.setState({ isButtonDisabled: true });
                 const currentDate = new Date();
                 const formattedDate = currentDate.toISOString();
@@ -143,10 +143,7 @@ export class CustomerIphones extends Component<ProductProps,ProductState> {
                 }).finally(() => {
                     this.setState({ isButtonDisabled: true });
                 });
-            } else {
-                console.log("not available");
-                toast.error(" not available");
-            }
+
         } catch (error) {
             console.log("Not available", error);
             toast("Not available" + error);

@@ -4,7 +4,6 @@ const ByModel = mongoose.Schema({
     "id":{
         required:true,
         type:Number,
-        unique:true,
         index:true
     },
     "productName": {
