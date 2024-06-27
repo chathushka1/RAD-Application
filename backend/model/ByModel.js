@@ -39,6 +39,11 @@ const ByModel = mongoose.Schema({
         required: true,
         type: String
     },
+    "productBook":{
+        required: true,
+        type: String,
+        default: "Not Buy"
+    },
     "bookingDateTime": {
         required: true,
         type: Date,

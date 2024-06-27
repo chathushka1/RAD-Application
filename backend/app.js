@@ -19,11 +19,17 @@ var iPadRouter = require('./routes/Ipad');
 var iWatchRouter = require('./routes/Iwatch');
 var byProductRouter = require('./routes/ByProduct');
 
+var bodyParser=require('body-parser');
+
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+app.use(express.json());
 
 app.use(logger('dev'));
 app.use(express.json());
