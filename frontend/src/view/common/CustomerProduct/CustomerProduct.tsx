@@ -92,10 +92,10 @@ export class CustomerProduct extends Component<ProductProps,ProductState>{
     private handleClick = () => {
         //this.setState({ isFormOpen: true });
 
-        const confirmed = window.confirm("Are you sure you want to book this room?");
+        const confirmed = window.confirm("Are you sure you want to Buy this Product?");
 
         if (!confirmed) {
-            toast.warning("Booking canceled.");
+            toast.warning("Order canceled.");
             return;
 
         }
@@ -105,8 +105,6 @@ export class CustomerProduct extends Component<ProductProps,ProductState>{
 
             const signUserDetails = JSON.parse(localStorage.getItem('signUserDetails') || '{}');
 
-
-            if (this.props.data.availability === 'available') {
                 // this.setState({ isButtonDisabled: true });
                 const currentDate = new Date();
                 const formattedDate = currentDate.toISOString();
@@ -116,16 +114,13 @@ export class CustomerProduct extends Component<ProductProps,ProductState>{
 
 
 
-                this.api.post(`/customer/byTheRoom`, {
+                this.api.post(`/byProduct/byTheProduct`, {
                     id: this.props.data.id,
-                    title: this.props.data.title,
+                    productName: this.props.data.productName,
+                    description: this.props.data.description,
                     price: this.props.data.price,
                     image: this.props.data.image,
-                    room: this.props.data.room,
-                    roomCount: this.props.data.roomCount,
-                    description: this.props.data.description,
-                    availability: this.props.data.availability,
-                    roomsIsBooked: this.props.data.roomsIsBooked,
+                    productBook: this.props.data.productBook,
                     signUserDetails: this.props.data.signUserDetails,
                     customerID: signUserDetails.objectId,
                     customerName: signUserDetails.firstName + " " + signUserDetails.lastName,
@@ -137,21 +132,17 @@ export class CustomerProduct extends Component<ProductProps,ProductState>{
 
 
                 }).then((response: any) => {
-                    console.log("By Room", response);
-                    toast.success("By Room Is Booking.Now You File Payment From");
+                    console.log("Buy Product", response);
+                    toast.success("Buy Product Is Booking.Now You File Payment From");
                 }).catch((error: any) => {
-                    console.log("Not By Room", error);
-                    toast("Not By Room" + error);
+                    console.log("Not Buy Product", error);
+                    toast("Not Buy Product" + error);
                 }).finally(() => {
                     this.setState({ isButtonDisabled: true });
                 });
-            } else {
-                console.log("Room not available");
-                toast.error("Room not available");
-            }
         } catch (error) {
-            console.log("Not By Room", error);
-            toast("Not By Room" + error);
+            console.log("Not Buy Product", error);
+            toast("Not Buy Product" + error);
             // this.setState({ isButtonDisabled: false });
         }
     }
